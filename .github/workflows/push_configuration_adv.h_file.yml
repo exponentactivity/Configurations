@@ -14,7 +14,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: '"config/examples/Creality/Ender-3 V2/Configuration_adv.h"'
+        source_file: "'config/examples/Creality/Ender-3 V2/Configuration_adv.h'"
         destination_repo: 'exponentactivity/Marlin'
         destination_branch: "2.0.x"
         destination_folder: 'Marlin'

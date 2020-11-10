@@ -16,6 +16,7 @@ jobs:
       with:
         source_file: 'config/examples/Creality/Ender-3 V2/Configuration_adv.h'
         destination_repo: 'exponentactivity/Marlin'
+        destination_branch: "2.0.x"
         destination_folder: 'Marlin'
         user_email: 'r.j.hansen@protonmail.com'
         user_name: 'exponentactivity'

@@ -1,0 +1,22 @@
+name: Push Configuration.h
+
+on: push
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes Configuration.h file
+      uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'config/examples/Creality/Ender-3%20V2/Configuration.h'
+        destination_repo: 'exponentactivity/Marlin'
+        destination_folder: 'Marlin'
+        user_email: 'r.j.hansen@protonmail.com'
+        user_name: 'exponentactivity'
+        commit_message: 'Updated configuration'
